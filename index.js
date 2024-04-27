@@ -18,7 +18,7 @@ const NEZHA_PORT = process.env.NEZHA_PORT || '5555';
 const NEZHA_KEY = process.env.NEZHA_KEY || '';           
 const DOMAIN = process.env.DOMAIN || ''; 
 const NAME = process.env.NAME || 'ABCD';
-const port = process.env.SERVER_PORT || process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 //获取服务器ISP
 const metaInfo = execSync(
@@ -44,8 +44,8 @@ const httpServer = http.createServer((req, res) => {
   }
 });
 
-httpServer.listen(port, () => {
-  console.log(`HTTP Server is running on port ${port}`);
+httpServer.listen(PORT, () => {
+  console.log(`HTTP Server is running on port ${PORT}`);
 });
 
 // 判断系统架构
